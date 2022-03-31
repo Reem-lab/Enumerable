@@ -26,7 +26,6 @@ module MyEnumerable
       return state
     end
     each { |x| state.push(x) if yield x }
+    state 
   end
 end
-
-
