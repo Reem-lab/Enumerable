@@ -18,4 +18,6 @@ list_item = MyList.new(1, 2, 3, 4)
 list_item.each
 puts list_item.all? { |n| n <= 4 }
 list_words = MyList.new('read', 'play', 'eat')
-puts list_words.all? { |n| n.length < 5 }
+puts list_words.filter?
+
+
