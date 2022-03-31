@@ -1,5 +1,5 @@
 module MyEnumerable
-  def all? 
+  def all?
     state = true
     unless block_given?
       each { |obj| state = false unless obj }
@@ -12,10 +12,10 @@ module MyEnumerable
   def any?
     state = false
     unless block_given?
-      each { |item| state = true if item}
+      each { |item| state = true if item }
       return state
     end
-    each { |n| state = true if yield n}
+    each { |n| state = true if yield n }
     state
   end
 
@@ -26,6 +26,6 @@ module MyEnumerable
       return state
     end
     each { |x| state.push(x) if yield x }
-    state 
+    state
   end
 end
